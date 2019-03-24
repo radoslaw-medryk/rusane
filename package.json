@@ -1,6 +1,6 @@
 {
     "name": "rusane",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
     "scripts": {
@@ -8,11 +8,15 @@
         "prettier": "prettier ./src/**/*.{js,ts,tsx,json} --write"
     },
     "devDependencies": {
-        "@radoslaw-medryk/tslint": "^0.1.7",
+        "@radoslaw-medryk/tslint": "^0.1.8",
+        "@types/big.js": "^4.0.5",
         "prettier": "^1.16.4",
         "tslint-config-prettier": "^1.18.0",
         "tslint": "^5.13.0",
         "typescript": "^3.3.3333"
     },
-    "dependencies": {}
+    "dependencies": {},
+    "peerDependencies": {
+        "big.js": "^5.2.2"
+    }
 }
