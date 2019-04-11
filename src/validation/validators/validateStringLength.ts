@@ -22,9 +22,8 @@ const stringLengthError = (length: number, rule: ValidateStringLengthRule, key?:
     };
 };
 
-export const validateStringLength: ValidationFunc<string, ValidateStringLengthRule> = (
+export const validateStringLength = (rule: ValidateStringLengthRule): ValidationFunc<string> => (
     value: string,
-    rule: ValidateStringLengthRule,
     key?: string
 ): ValidationResult => {
     const length = value.length;

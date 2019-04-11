@@ -21,9 +21,8 @@ const bigQuantError = (value: Big, rule: ValidateBigQuantRule, key?: string): Va
     };
 };
 
-export const validateBigQuant: ValidationFunc<Big, ValidateBigQuantRule> = (
+export const validateBigQuant = (rule: ValidateBigQuantRule): ValidationFunc<Big> => (
     value: Big,
-    rule: ValidateBigQuantRule,
     key?: string
 ): ValidationResult => {
     if (!value.mod(rule.quant).eq(0)) {

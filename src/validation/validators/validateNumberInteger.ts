@@ -15,11 +15,7 @@ const numberIntegerError = (value: number, key?: string): ValidationResult => {
     };
 };
 
-export const validateNumberInteger: ValidationFunc<number, undefined> = (
-    value: number,
-    rule?: undefined,
-    key?: string
-): ValidationResult => {
+export const validateNumberInteger: ValidationFunc<number> = (value: number, key?: string): ValidationResult => {
     if (!Number.isInteger(value)) {
         return numberIntegerError(value, key);
     }

@@ -22,9 +22,8 @@ const numberRangeError = (value: number, rule: ValidateNumberRangeRule, key?: st
     };
 };
 
-export const validateNumberRange: ValidationFunc<number, ValidateNumberRangeRule> = (
+export const validateNumberRange = (rule: ValidateNumberRangeRule): ValidationFunc<number> => (
     value: number,
-    rule: ValidateNumberRangeRule,
     key?: string
 ): ValidationResult => {
     if (rule.minValue !== undefined && value < rule.minValue) {

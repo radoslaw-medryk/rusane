@@ -2,7 +2,6 @@ import { ValidationResult } from "../ValidationResult";
 import { noError } from "../helpers/noError";
 import Big from "big.js";
 import { BigRangeError, BigRangeErrorType } from "../errors/BigRangeError";
-import { ValidationFunc } from "../ValidationFunc";
 
 type ValidateBigRangeRule = {
     minValue?: Big;
@@ -23,11 +22,7 @@ const bigRangeError = (value: Big, rule: ValidateBigRangeRule, key?: string): Va
     };
 };
 
-export const validateBigRange: ValidationFunc<Big, ValidateBigRangeRule> = (
-    value: Big,
-    rule: ValidateBigRangeRule,
-    key?: string
-): ValidationResult => {
+export const validateBigRange = (rule: ValidateBigRangeRule) => (value: Big, key?: string): ValidationResult => {
     if (rule.minValue !== undefined && value.lt(rule.minValue)) {
         return bigRangeError(value, rule, key);
     }
