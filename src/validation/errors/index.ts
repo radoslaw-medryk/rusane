@@ -6,3 +6,4 @@ export * from "./StringLengthError";
 export * from "./ValidationError";
 export * from "./ValidationMultiError";
 export * from "./ValidationPropsError";
+export * from "./EmailError";

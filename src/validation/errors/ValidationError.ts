@@ -5,6 +5,7 @@ import { ValidationPropsError } from "./ValidationPropsError";
 import { BigQuantError } from "./BigQuantError";
 import { ValidationMultiError } from "./ValidationMultiError";
 import { NumberIntegerError } from "./NumberIntegerError";
+import { EmailError } from "./EmailError";
 
 export type ValidationErrorBase = {
     key?: string;
@@ -17,4 +18,5 @@ export type ValidationError =
     | ValidationPropsError
     | BigQuantError
     | ValidationMultiError
-    | NumberIntegerError;
+    | NumberIntegerError
+    | EmailError;
